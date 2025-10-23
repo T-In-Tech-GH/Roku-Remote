@@ -1,5 +1,5 @@
 import { Button } from "react-native";
-import rokuIp from "./config.js";
+import { rokuIp } from "./config.js";
 
 export default function Nav() { 
 
