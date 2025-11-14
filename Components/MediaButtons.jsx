@@ -1,4 +1,4 @@
-import { Button } from "react-native";
+import { View, StyleSheet, Pressable, Text } from "react-native";
 import { rokuIp } from "./config.js";
 
 export default function Media() { 
@@ -8,20 +8,24 @@ export default function Media() {
     fetch(`http://${rokuIp}:8060/keypress/Play`, { method: "POST" });
   }
   
-  function pause() { 
-    fetch(`http://${rokuIp}:8060/keypress/Pause`, { method: "POST" });
+  function rewind() { 
+    fetch(`http://${rokuIp}:8060/keypress/Rewind`, { method: "POST" });
   }
-
-
-
-
-
 
 
   return ( 
     <> 
-    <Button title="Play" onPress={play} />
-    <Button title="Pause" onPress={pause} /> 
+    <View style={styles}>
+    <Pressable style={styles.color} title="Play" onPress={play} /> 
+    <Pressable title="Rewind" onPress={rewind} />
+    </View> 
     </>
   )
 }
+
+const styles = StyleSheet.create({ 
+  container: { 
+    color: "black",
+    backgroundColor: "red",
+  }
+});

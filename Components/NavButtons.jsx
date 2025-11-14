@@ -1,4 +1,4 @@
-import { Button } from "react-native";
+import { Button, View, TouchableOpacity  } from "react-native";
 import { rokuIp } from "./config.js";
 
 export default function Nav() { 
@@ -25,11 +25,11 @@ const goLeft = ()  => {
 
   return ( 
     <>
-    <Button title="Up" onPress={goUp} />
-    <Button title="Down" onPress={goDown} /> 
-    <Button title="Left" onPress={goLeft} />
-    <Button title="Right" onPress={goRight} />
-    <Button title="Ok" onPress={select} />  
+      <Button title="Up" onPress={goUp} /> 
+      <Button title="Down" onPress={goDown} /> 
+      <Button title="Left" onPress={goLeft} /> 
+      <Button title="Right" onPress={goRight} /> 
+      <Button title="Select" onPress={select} /> 
     </>
   )
 }
