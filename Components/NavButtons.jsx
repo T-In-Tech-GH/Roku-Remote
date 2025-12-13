@@ -1,36 +1,50 @@
-import { Button, View, TouchableOpacity  } from "react-native";
-import { rokuIp } from "./config.js";
+import { StyleSheet, View, Pressable, Text  } from "react-native";
+import { dpad } from "./EcpNav.js";
 
 export default function Nav() { 
-
-const goLeft = ()  => { 
-    fetch(`http://${rokuIp}:8060/keypress/Left`, {method: "POST"});
-  };
-
-  const goRight = () => {
-     fetch(`http://${rokuIp}:8060/keypress/Right`, {method: "POST"});
-  }
-
-  const goUp = () => { 
-    fetch(`http://${rokuIp}:8060/keypress/Up`, {method: "POST"});
-  }
-
-  const goDown = () => { 
-    fetch(`http://${rokuIp}:8060/keypress/Down`, {method: "POST"});
-  }
-
-  const select = () => { 
-        fetch(`http://${rokuIp}:8060/keypress/select`, { method: "POST" });
-  }
+       
 
   return ( 
     <>
-      <Button title="Up" onPress={goUp} /> 
-      <Button title="Down" onPress={goDown} /> 
-      <Button title="Left" onPress={goLeft} /> 
-      <Button title="Right" onPress={goRight} /> 
-      <Button title="Select" onPress={select} /> 
+    <View>
+      <View style={styles.sDpad}>
+      <Pressable onPress={dpad.up}> 
+        <Text>Up</Text>
+        </Pressable> 
+        </View>
+      <View style={styles.mDpad}>
+      <Pressable onPress={dpad.left}> 
+        <Text>Left</Text>
+      </Pressable>
+      <Pressable onPress={dpad.select}> 
+        <Text>Ok</Text>
+      </Pressable>
+      <Pressable onPress={dpad.right}> 
+        <Text>Right</Text>
+      </Pressable>
+      </View>
+       <View style={styles.sDpad}>
+        <Pressable onPress={dpad.down}> 
+        <Text>Down</Text>
+      </Pressable>
+      </View>
+      </View>
     </>
   )
 }
 
+const styles = StyleSheet.create({ 
+  mDpad: { 
+    alignItems: "center",
+    flexDirection: "row",
+    justifyContent: "center",
+    gap: 30,
+  }, 
+  sDpad: { 
+    flexDirection: "column",
+    padding: 30,
+    alignItems: "center", 
+    justifyContent: "space-between",
+    marginBottom: 10
+  }
+})

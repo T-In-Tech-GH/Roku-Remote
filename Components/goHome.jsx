@@ -1,20 +1,30 @@
-import { Button } from "react-native";
-import { rokuIp } from "./config.js";
+import { Pressable, StyleSheet, Text, View } from "react-native";
+import { dpad } from "./EcpNav.js";
 
 export default function Home() { 
 
-     function goHome() {
-    fetch(`http://${rokuIp}:8060/keypress/Home`, { method: "POST" });
-  }
-
-  function goBack() { 
-    fetch(`http://${rokuIp}:8060/keypress/Back`, {method: "POST"});
-  }
 
   return ( 
     <>
-    <Button title="Back" onPress={goBack} /> 
-    <Button title="Home" onPress={goHome} /> 
+    <View style={styles.topBtn}>
+    <Pressable onPress={dpad.back}>
+      <Text>Back</Text>
+    </Pressable>
+    <Pressable onPress={dpad.home}>
+      <Text>Home</Text>
+    </Pressable>
+    </View>
     </>
   )
 }
+
+const styles = StyleSheet.create({ 
+  topBtn: {
+   flexDirection: "row",
+   gap: 20,
+   justifyContent: "center",
+   marginTop: 10,
+   marginBottom: 10,
+  }, 
+})
+

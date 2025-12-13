@@ -8,7 +8,7 @@ import Power from "./Components/Power.jsx";
 export default function App() {
 
   return (
-    <View style={{ flex: 1, justifyContent: "center" }}>
+    <View style={{ flex: 1,  justifyContent: "center", backgroundColor: "white", }}>
       <Power /> 
       <Home /> 
       <Nav /> 

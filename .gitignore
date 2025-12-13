@@ -42,3 +42,6 @@ yarn-error.*
 
 # config.js
 Components/config.js 
+
+#env file 
+.env
