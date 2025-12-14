@@ -21,9 +21,9 @@ export default function Home() {
 const styles = StyleSheet.create({ 
   topBtn: {
    flexDirection: "row",
-   gap: 20,
+   gap: 50,
    justifyContent: "center",
-   marginTop: 10,
+   marginTop: 25,
    marginBottom: 10,
   }, 
 })

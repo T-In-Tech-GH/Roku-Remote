@@ -34,13 +34,14 @@ const styles = StyleSheet.create({
   flexDirection: "row",
   justifyContent: "center",
   alignItems: "center",
-  gap: 30,
+  gap: 40,
   },
   btmBtns: { 
     flexDirection: "row",
     justifyContent: "center",
     alignItems: "center",
+    marginTop: 15,
     gap: 30,
-    top: 10,
+    top: 20,
   }
 })

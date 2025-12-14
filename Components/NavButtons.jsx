@@ -2,9 +2,9 @@ import { StyleSheet, View, Pressable, Text  } from "react-native";
 import { dpad } from "./EcpNav.js";
 
 export default function Nav() { 
-       
 
   return ( 
+
     <>
     <View>
       <View style={styles.sDpad}>
@@ -42,7 +42,7 @@ const styles = StyleSheet.create({
   }, 
   sDpad: { 
     flexDirection: "column",
-    padding: 30,
+    padding: 40,
     alignItems: "center", 
     justifyContent: "space-between",
     marginBottom: 10
