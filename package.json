@@ -9,11 +9,13 @@
     "web": "expo start --web"
   },
   "dependencies": {
-    "babel-preset-expo": "~54.0.0",
-    "expo": "~54.0.18",
-    "expo-status-bar": "~3.0.8",
-    "react": "19.1.0",
-    "react-native": "0.81.5",
+    "@babel/preset-env": "^7.29.7",
+    "@babel/preset-react": "^7.29.7",
+    "babel-preset-expo": "~56.0.15",
+    "expo": "^56.1.15",
+    "expo-status-bar": "~56.0.4",
+    "react": "19.2.3",
+    "react-native": "0.85.3",
     "react-native-dotenv": "^3.4.11"
   },
   "private": true

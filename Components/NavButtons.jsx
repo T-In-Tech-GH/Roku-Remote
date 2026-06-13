@@ -4,7 +4,6 @@ import { dpad } from "./EcpNav.js";
 export default function Nav() { 
 
   return ( 
-
     <>
     <View>
       <View style={styles.sDpad}>
