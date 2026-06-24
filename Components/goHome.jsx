@@ -1,7 +1,7 @@
 import { Pressable, StyleSheet, Text, View } from "react-native";
 import { dpad } from "./EcpNav.js";
 
-export default function Home() { 
+const Home = () => { 
 
 
   return ( 
@@ -28,3 +28,4 @@ const styles = StyleSheet.create({
   }, 
 })
 
+export default Home;

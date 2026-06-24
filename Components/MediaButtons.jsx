@@ -1,5 +1,5 @@
 import { View, StyleSheet, Pressable, Text } from "react-native";
-import { playbackBtns } from "./EcpNav.js";
+import { playbackBtns, appBtns } from "./EcpNav.js";
 
 export default function Media() { 
 
@@ -25,6 +25,17 @@ export default function Media() {
       <Text>Fast Forward</Text>
     </Pressable>
     </View>
+    <View style={styles.appBtn}>
+    <Pressable onPress={appBtns.netflix}> 
+      <Text style={styles.netflixBtnColor}>Netflix</Text>
+    </Pressable>
+    <Pressable onPress={appBtns.disneyplus}> 
+      <Text style={styles.disneyBtnColor}>Disney+</Text>
+    </Pressable>
+    <Pressable onPress={appBtns.HBO}>
+      <Text style={styles.HBOBtnColor}>HBOMax</Text>
+    </Pressable>
+    </View>
     </>
   )
 }
@@ -43,5 +54,21 @@ const styles = StyleSheet.create({
     marginTop: 15,
     gap: 30,
     top: 20,
-  }
+  },
+  appBtn: { 
+    flexDirection: "column",
+    marginTop: 50,
+    alignItems: "center",
+    gap: 30,
+    
+  },
+  netflixBtnColor: { 
+    color: "red",
+  },
+  disneyBtnColor: { 
+    color: "blue",
+  },
+  HBOBtnColor: { 
+  color: "green",
+  },
 })

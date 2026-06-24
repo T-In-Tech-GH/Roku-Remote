@@ -5,9 +5,18 @@ import { rokuIp } from "./config.js";
     return fetch(`http://${rokuIp}:8060/keypress/${command}`, { method: "POST" });
 }
 
+const appCommand = (num) => { 
+  return fetch(`http://${rokuIp}:8060/launch/${num}`, { method: "POST" });
+}
 
 export const onBtn = { 
     power:  () => fetchCommand("Power"),
+}
+
+export const volume = { 
+   volumeUp: () => fetchCommand("VolumeUp"),
+   volumeDown: () => fetchCommand("VolumeDown"),
+   volumeMute: () => fetchCommand("VolumeMute"),
 }
 
 export const dpad = { 
@@ -28,6 +37,15 @@ export const playbackBtns = {
    instantReplay: () => fetchCommand("InstantReplay"),
 }
 
+export const appBtns = {
+   netflix: () => appCommand("12"),
+   disneyplus: () => appCommand("291097"),
+   HBO: () => appCommand("61322"),
+   youtube: () => appCommand("837"),
+}
 
-const Ecp = {  dpad, playbackBtns, onBtn }
+
+const Ecp = {  dpad, playbackBtns, onBtn };
+const Apps = { appBtns };
+
 export default Ecp;

@@ -1,13 +1,24 @@
 import {StyleSheet, Text, View, Pressable} from "react-native";
-import { onBtn } from "./EcpNav.js";
+import { onBtn, volume } from "./EcpNav.js";
 
 export default function Power() { 
 
 
     return ( 
         <> 
+        <View style={styles.volumeBtns}> 
+            <Pressable onPress={volume.volumeUp}> 
+                <Text>+</Text>
+            </Pressable>
+            <Pressable onPress={volume.volumeDown}>
+                <Text>-</Text>
+            </Pressable>
+            <Pressable onPress={volume.volumeMute}> 
+                <Text>🔇</Text>
+            </Pressable>
+        </View>
         <View style={styles.powerBtn}>
-        <Pressable style={styles.powerBtnColor} onPress={onBtn.power}> 
+        <Pressable onPress={onBtn.power}> 
           <Text style={styles.powerBtnColor}>Power</Text>
         </Pressable>
         </View>
@@ -16,12 +27,18 @@ export default function Power() {
 }
 
 const styles = StyleSheet.create({ 
+    volumeBtns: { 
+    flexDirection: "column",
+    marginBottom: 30,
+    alignItems: "center",
+    gap: 20,
+    },
    powerBtn: { 
    padding: 12,
    justifyContent: "center",
    alignItems: "center",
    },
    powerBtnColor: { 
-    color: "red",
+    color: "purple",
    }
 })

@@ -1,7 +1,9 @@
 import { StyleSheet, View, Pressable, Text  } from "react-native";
 import { dpad } from "./EcpNav.js";
+import { Image } from "react-native";
 
 export default function Nav() { 
+ 
 
   return ( 
     <>
