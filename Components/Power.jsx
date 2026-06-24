@@ -10,11 +10,11 @@ export default function Power() {
             <Pressable onPress={volume.volumeUp}> 
                 <Text>+</Text>
             </Pressable>
-            <Pressable onPress={volume.volumeDown}>
-                <Text>-</Text>
-            </Pressable>
-            <Pressable onPress={volume.volumeMute}> 
+            <Pressable onPress={volume.volumeMute}>
                 <Text>🔇</Text>
+            </Pressable>
+            <Pressable onPress={volume.volumeDown}> 
+                <Text>-</Text>
             </Pressable>
         </View>
         <View style={styles.powerBtn}>
@@ -28,10 +28,11 @@ export default function Power() {
 
 const styles = StyleSheet.create({ 
     volumeBtns: { 
-    flexDirection: "column",
+    flexDirection: "row",
+    marginLeft: 0,
     marginBottom: 30,
-    alignItems: "center",
-    gap: 20,
+    justifyContent: "center",
+    gap: 100,
     },
    powerBtn: { 
    padding: 12,

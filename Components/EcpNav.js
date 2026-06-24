@@ -41,7 +41,7 @@ export const appBtns = {
    netflix: () => appCommand("12"),
    disneyplus: () => appCommand("291097"),
    HBO: () => appCommand("61322"),
-   youtube: () => appCommand("837"),
+   hulu: () => appCommand("2285"),
 }
 
 

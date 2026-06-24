@@ -35,6 +35,9 @@ export default function Media() {
     <Pressable onPress={appBtns.HBO}>
       <Text style={styles.HBOBtnColor}>HBOMax</Text>
     </Pressable>
+    <Pressable onPress={appBtns.hulu}> 
+      <Text style={styles.HuluBtnColor}>Hulu</Text>
+    </Pressable>
     </View>
     </>
   )
@@ -57,10 +60,9 @@ const styles = StyleSheet.create({
   },
   appBtn: { 
     flexDirection: "column",
-    marginTop: 50,
+    marginTop: 70,
     alignItems: "center",
     gap: 30,
-    
   },
   netflixBtnColor: { 
     color: "red",
@@ -69,6 +71,9 @@ const styles = StyleSheet.create({
     color: "blue",
   },
   HBOBtnColor: { 
-  color: "green",
+  color: "gray",
+  },
+  HuluBtnColor: { 
+    color: "green",
   },
 })
